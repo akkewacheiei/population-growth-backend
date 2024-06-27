@@ -1,9 +1,17 @@
 const express = require("express");
 const fs = require("fs");
 const csv = require("csv-parser");
+const cors = require("cors"); // Import cors package
 
 const app = express();
 const port = 3000;
+
+app.use(
+  cors({
+    credentials: true,
+    origin: ["http://localhost:3000"],
+  })
+);
 
 const validCountries = new Set([
   // ใส่รายชื่อประเทศที่ถูกต้องทั้งหมด
