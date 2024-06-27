@@ -411,7 +411,7 @@ app.get("/", (req, res) => {
 app.get("/population", (req, res) => {
   const results = {};
 
-  fs.createReadStream("api/population-and-demography.csv")
+  fs.createReadStream("./api/population-and-demography.csv")
     .pipe(csv())
     .on("data", (data) => {
       const year = data.Year;
