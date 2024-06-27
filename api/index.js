@@ -230,6 +230,9 @@ const countryRegions = {
     "Zimbabwe": "Africa"
 };
 
+app.get('/', (req, res) =>{
+    res.send("Population API")
+})
 
 app.get('/population', (req, res) => {
     const results = {};
