@@ -234,7 +234,7 @@ const countryRegions = {
 app.get('/population', (req, res) => {
     const results = {};
 
-    fs.createReadStream('population-and-demography.csv')
+    fs.createReadStream('api/population-and-demography.csv')
         .pipe(csv())
         .on('data', (data) => {
             const year = data.Year;
