@@ -9,7 +9,7 @@ const port = 3000;
 app.use(
   cors({
     credentials: true,
-    origin: ["http://localhost:3000", "https://population-growth-frontend.vercel.app/"],
+    origin: ["http://localhost:3000", "https://population-growth-frontend.vercel.app"],
   })
 );
 
